@@ -48,6 +48,7 @@ async function fetchAndLoadDataOnce(date) {
       containerEl.innerHTML = "";
       content.forEach(item => {
         const articleEl = document.createElement("article");
+        articleEl.classList.add("incident");
         articleEl.innerHTML = `${item.year ? `<h3>Year ${item.year}</h3>` : ""}
       <p>${item.text}</p>`;
 

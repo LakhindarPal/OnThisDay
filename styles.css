@@ -74,7 +74,6 @@ input {
   margin: 5px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 }
 
 button {
@@ -117,6 +116,15 @@ article {
   margin: 10px;
   border-radius: 6px;
   padding: 5px;
+}
+
+.incident {
+  cursor: pointer;
+}
+
+.incident:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .errorText {
