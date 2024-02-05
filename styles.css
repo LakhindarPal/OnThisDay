@@ -137,6 +137,10 @@ dialog {
   padding: 0;
 }
 
+dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
+
 img {
   height: auto;
   width: 100%;
