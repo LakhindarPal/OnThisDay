@@ -101,7 +101,7 @@ async function loadDataOnce(dateParam) {
 
 // detailed information of a incident
 function showDetails(data) {
-  const figureEl = (page) => (page.originalimage?.source) ?
+  const figureEl = (page) => (page.image?.source) ?
     `<figure>
       <img src="${page.image.source}" alt="${page.description}" width="${page.image.width}" height="${page.image.height}">
       ${page.description?`<figcaption>${page.description}</figcaption>`:""}
