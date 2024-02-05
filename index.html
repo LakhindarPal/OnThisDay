@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On This Day</title>
+  <meta name="description" content="Discover fascinating historical events and information with rich multimedia content, including titles, thumbnails, descriptions, and 'Read more' links.">
+  <meta name="author" content="Lakhindar Pal">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://onthisday.glitch.me">
+  <meta name="twitter:title" content="On This Day">
+  <meta name="twitter:description" content="Discover fascinating historical events and information with rich multimedia content, including titles, thumbnails, descriptions, and 'Read more' links.">
+  <meta name="twitter:image" content="icons/wide-image-1200x630.webp">
+
+  <meta property="og:url" content="https://onthisday.glitch.me">
+  <meta property="og:title" content="On This Day">
+  <meta property="og:description" content="Discover fascinating historical events and information with rich multimedia content, including titles, thumbnails, descriptions, and 'Read more' links.">
+  <meta property="og:image" content="icons/wide-image-1200x630.webp">
+
+  <link rel="icon" sizes="512x512" href="icons/android-icon-512x512.png">
+  <link rel="icon" sizes="192x192" href="icons/android-icon-192x192.png">
+
+  <link rel="apple-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="apple-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+
+  <meta name="theme-color" content="#007bff">
+  <link rel="manifest" href="pwa/manifest.json">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("pwa/sw.js")
+        .then((reg) => console.log("Service Worker registered", reg))
+        .catch((err) =>
+          console.error("Service Worker **not** registered", err)
+        );
+    } else {
+      console.warn("Service Worker not supported in this browser");
+    }
+  </script>
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="branding">
+      <img id="logo" src="icons/android-icon-512x512.png" alt="Site Logo">
+      <h1>On <span>This Day</span></h1>
+    </div>
+    <nav id="tabnav">
+      <button id="selectedBtn" data-tab="selected">Selected</button>
+      <button id="birthsBtn" data-tab="births">Births</button>
+      <button id="deathsBtn" data-tab="deaths">Deaths</button>
+      <button id="holidaysBtn" data-tab="holidays">Holidays</button>
+      <button id="eventsBtn" data-tab="events">Others</button>
+    </nav>
+    <div id="datePicker">
+      <label for="dateInput">Select date:</label>
+      <input type="date" id="dateInput">
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="selected">
+      <h2>Curated Events</h2>
+      <div class="container"></div>
+      <!-- Content will be loaded dynamically -->
+    </section>
+
+    <section id="births">
+      <h2>Notable Births</h2>
+      <div class="container"></div>
+      <!-- Content will be loaded dynamically -->
+    </section>
+
+    <section id="deaths">
+      <h2>Notable Deaths</h2>
+      <div class="container"></div>
+      <!-- Content will be loaded dynamically -->
+    </section>
+
+    <section id="holidays">
+      <h2>International Holidays</h2>
+      <div class="container"></div>
+      <!-- Content will be loaded dynamically -->
+    </section>
+
+    <section id="events">
+      <h2>Other Events</h2>
+      <div class="container"></div>
+      <!-- Content will be loaded dynamically -->
+    </section>
+  </main>
+
+  <dialog id="details">
+    <header></header>
+    <div>
+      <!-- Content will be loaded dynamically -->
+    </div>
+    <footer>
+      <button id="closeBtn">Close</button>
+    </footer>
+  </dialog>
+
+  <footer>
+    <p>
+      <span>Made with ❤️ by</span>
+      <a href="https://github.com/LakhindarPal" target="_blank" rel="noopener noreferrer">Lakhindar</a>.
+    </p>
+    <p>
+      <span>Powered by</span>
+      <a href="https://www.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia</a>.
+    </p>
+  </footer>
+</body>
+
+</html>

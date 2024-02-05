@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #1a1a1a;
+  --theme-color: #007bff;
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --theme-color: #4d7fff;
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+  }
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16pt;
+  margin: 0;
+}
+
+body,
+dialog {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: var(--theme-color);
+  color: #ffffff;
+  position: sticky;
+  z-index: 2;
+}
+
+header {
+  top: 0;
+  position: sticky;
+  padding-bottom: 10px;
+  padding: 5px;
+  z-index: 2;
+}
+
+#branding,
+nav,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#logo {
+  border-radius: 50%;
+  height: 36px;
+  width: auto;
+}
+
+button,
+input {
+  font-size: inherit;
+  background: transparent;
+  padding: 8px 10px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button {
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #6aa8ff;
+  color: #000;
+}
+
+
+section h2 {
+  color: var(--theme-color);
+  text-wrap: balance;
+}
+
+h3 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+section {
+  display: none;
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+article {
+  border: 1px solid var(--theme-color);
+  margin: 10px;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.errorText {
+  color: orangered;
+  width: 100vw;
+  text-wrap: wrap;
+}
+
+dialog {
+  padding: 0;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer p {
+  font-size: small;
+}
